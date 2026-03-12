@@ -1,4 +1,5 @@
 # JavaLabFile
+## assi-1
 ```
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -71,3 +72,5 @@ public class JavaApplication31 {
           
               }
 ```
+<img width="448" height="324" alt="image" src="https://github.com/user-attachments/assets/7cd1d40e-e645-438f-a7f3-e8a35ab46c0f" />
+

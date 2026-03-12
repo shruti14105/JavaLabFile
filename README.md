@@ -286,6 +286,7 @@ public class JavaApplication31 {
               }
    ```
 <img width="421" height="308" alt="image" src="https://github.com/user-attachments/assets/d00ad201-3d35-4201-8daa-92cfd5b76b72" />
+
 ## assi-5
 ```
 /*

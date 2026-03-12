@@ -7,6 +7,8 @@
 
 [Program-4 WAP to add two times where each time is in hours,minutes,seconds](#assi-4)
 
+[Program-5 WAP to add two times where each time is in hours,minutes](#assi-5)
+
 ## assi-1
 ```
 /*
@@ -209,6 +211,7 @@ public class JavaApplication31 {
               }
 ```
 <img width="361" height="238" alt="image" src="https://github.com/user-attachments/assets/51d2df3a-4e71-41d2-979a-393df9f1e413" />
+
 ## assi-4
 ```
 /*
@@ -283,5 +286,76 @@ public class JavaApplication31 {
               }
    ```
 <img width="421" height="308" alt="image" src="https://github.com/user-attachments/assets/d00ad201-3d35-4201-8daa-92cfd5b76b72" />
+## assi-5
+```
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication31;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author IBM4
+ */
+public class JavaApplication31 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+      Test d1=new Test();
+      Test d2=new Test();
+        Test d3=new Test();
+      d1.input();
+      d2.input();
+   
+      d3.add(d1, d2);
+      d3.output();
+    } 
+}
+      class Test{
+
+            int hours,minutes;
+              void input()
+          {
+              
+              Scanner s = new Scanner(System.in);
+               System.out.println("hours=");
+              hours=s.nextInt();
+              System.out.println("minutes=");
+              minutes=s.nextInt();
+              
+             
+          }
+          void output()
+          {
+              System.out.println("hours="+hours);
+              System.out.println("minutes="+minutes);
+             
+        
+        
+          }
+          void add(Test t1,Test t2)
+          {
+              hours=t1.hours+t2.hours;
+              minutes=t1.minutes+t2.minutes;
+              if(minutes>=60)
+              {
+                  hours=hours+1;
+                  minutes=minutes-60;
+              }
+          }
+          
+              }
+          ```
+
+
+
+<img width="374" height="265" alt="image" src="https://github.com/user-attachments/assets/43f0f10a-c68e-48cd-bcf4-21558dec7b8f" />
+
 
 

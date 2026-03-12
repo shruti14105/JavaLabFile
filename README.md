@@ -1,5 +1,6 @@
 # JavaLabFile
 [Program-1 WAP to add two distances](#assi-1)
+[Program-2 WAP to multiply with constants ](#assi-2)
 ## assi-1
 ```
 /*
@@ -74,4 +75,69 @@ public class JavaApplication31 {
               }
 ```
 <img width="448" height="324" alt="image" src="https://github.com/user-attachments/assets/7cd1d40e-e645-438f-a7f3-e8a35ab46c0f" />
+
+## assi-2
+```
+
+import java.util.Scanner;
+
+
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author IBM4
+ */
+public class ABCD {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    
+  Test t1= new Test();
+    Test t2= new Test();
+    t1.input();
+   
+
+    t1.proc( );
+ 
+        t1.output();
+
+    
+   
+    }
+}
+class Test{
+    int a;
+    int b;
+    void input(){
+             Scanner s= new Scanner(System.in );
+    System.out.println("a=");
+    a=s.nextInt();
+    System.out.println("b=") ;
+    b=s.nextInt();
+            
+    }
+    void output(){
+        System.out.println("a="+a);
+        System.out.println("b="+b);
+        
+        
+    }
+    void proc()
+    {
+        a=a*2;
+        b=b*3;
+       
+    }
+}
+```
+<img width="377" height="218" alt="image" src="https://github.com/user-attachments/assets/04449201-042d-465d-b89e-9ca1bcfef18d" />
 

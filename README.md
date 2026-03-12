@@ -362,7 +362,9 @@ public class JavaApplication31 {
 
 <img width="374" height="265" alt="image" src="https://github.com/user-attachments/assets/43f0f10a-c68e-48cd-bcf4-21558dec7b8f" />
 
+
 ## assi-6
+
 ```
 import java.util.Scanner;
 

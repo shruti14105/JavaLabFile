@@ -11,7 +11,7 @@
 
 [Program-6 Write a class that is having 4 methods for 1-dimensional array 1.INPUT 2.OUTPUT ORIGINAL 3.OUTPUT REVERSE 4.REVERSE](#assi-6)
 
-
+------------------
 
 ## assi-1
 ```
@@ -288,7 +288,7 @@ public class JavaApplication31 {
           }
           
               }
-   ```
+```
 <img width="421" height="308" alt="image" src="https://github.com/user-attachments/assets/d00ad201-3d35-4201-8daa-92cfd5b76b72" />
 
 ## assi-5
@@ -356,10 +356,8 @@ public class JavaApplication31 {
           }
           
               }
-          ```
 
-
-
+```
 <img width="374" height="265" alt="image" src="https://github.com/user-attachments/assets/43f0f10a-c68e-48cd-bcf4-21558dec7b8f" />
 
 
@@ -433,6 +431,3 @@ class OneDArray {
 }
 ```
 <img width="409" height="275" alt="image" src="https://github.com/user-attachments/assets/2c4a3cb5-5a6d-45c5-894a-84f70450e690" />
-
-
-

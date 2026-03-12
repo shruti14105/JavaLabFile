@@ -9,6 +9,10 @@
 
 [Program-5 WAP to add two times where each time is in hours,minutes](#assi-5)
 
+[Program-6 Write a class that is having 4 methods for 1-dimensional array 1.INPUT 2.OUTPUT ORIGINAL 3.OUTPUT REVERSE 4.REVERSE](#assi-6)
+
+
+
 ## assi-1
 ```
 /*
@@ -357,6 +361,76 @@ public class JavaApplication31 {
 
 
 <img width="374" height="265" alt="image" src="https://github.com/user-attachments/assets/43f0f10a-c68e-48cd-bcf4-21558dec7b8f" />
+
+## assi-6
+```
+import java.util.Scanner;
+
+class OneDArray {
+
+    int arr[];
+    int n;
+
+    // 1. Input Method
+    void input() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter size of array: ");
+        n = sc.nextInt();
+
+        arr = new int[n];
+
+        System.out.println("Enter elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+    }
+
+    // 2. Original Output Method
+    void displayOriginal() {
+        System.out.println("Original array");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    // 3. Output Reverse (without changing array)
+    void displayReverse() {
+        System.out.println("Array in Reverse Order:");
+        for (int i = n - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    // 4. Reverse Method (actually reverse the array)
+    void reverseArray() {
+        int temp;
+
+        for (int i = 0; i < n / 2; i++) {
+            temp = arr[i];
+            arr[i] = arr[n - 1 - i];
+            arr[n - 1 - i] = temp;
+        }
+    }
+
+    // Main Method
+    public static void main(String[] args) {
+
+        OneDArray obj = new OneDArray();
+
+        obj.input();
+        obj.displayOriginal();
+
+        obj.displayReverse();
+
+        obj.reverseArray();
+       
+    }
+}
+```
+<img width="409" height="275" alt="image" src="https://github.com/user-attachments/assets/2c4a3cb5-5a6d-45c5-894a-84f70450e690" />
 
 
 

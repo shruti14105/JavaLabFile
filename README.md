@@ -1,4 +1,5 @@
 # JavaLabFile
+[Program-1 WAP to add two distances](#assi-1)
 ## assi-1
 ```
 /*

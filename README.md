@@ -10,6 +10,8 @@
 [Program-5 WAP to add two times where each time is in hours,minutes](#assi-5)
 
 [Program-6 Write a class that is having 4 methods for 1-dimensional array 1.INPUT 2.OUTPUT ORIGINAL 3.OUTPUT REVERSE 4.REVERSE](#assi-6)
+[Program-7 
+
 
 ------------------
 
@@ -431,3 +433,128 @@ class OneDArray {
 }
 ```
 <img width="409" height="275" alt="image" src="https://github.com/user-attachments/assets/2c4a3cb5-5a6d-45c5-894a-84f70450e690" />
+## assi-7
+```
+class ClassOne {
+    void fun() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("ClassOne " + i);
+        }
+    }
+}
+
+class ClassTwo {
+    void fun() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("ClassTwo " + i);
+        }
+    }
+}
+
+class ClassThree {
+    void fun() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("ClassThree " + i);
+        }
+    }
+}
+
+public class NewClass {
+    public static void main(String[] args) {
+        ClassOne obj1 = new ClassOne();
+        ClassTwo obj2 = new ClassTwo();
+        ClassThree obj3 = new ClassThree();
+
+        obj1.fun();
+        obj2.fun();
+        obj3.fun();
+    }
+}
+```
+<img width="637" height="522" alt="Screenshot 2026-04-16 100728" src="https://github.com/user-attachments/assets/30577073-1831-41ff-bbe9-5618b98debe3" />
+
+## assi-8
+```
+class ClassOneTh extends Thread {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("ClassOne " + i);
+        }
+    }
+}
+
+class ClassTwoTh extends Thread {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("ClassTwo " + i);
+        }
+    }
+}
+
+class ClassThreeTh extends Thread {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("ClassThree " + i);
+        }
+    }
+}
+
+public class NewClass1 {
+    public static void main(String[] args) {
+        ClassOneTh obj1 = new ClassOneTh();
+        ClassTwoTh obj2 = new ClassTwoTh();
+        ClassThreeTh obj3 = new ClassThreeTh();
+
+        obj1.start();
+        obj2.start();
+        obj3.start();
+    }
+}
+```
+<img width="647" height="677" alt="Screenshot 2026-04-16 094708" src="https://github.com/user-attachments/assets/b0720450-0efe-4471-ab5a-0b5b434a6308" />
+## assi-9
+```
+class ClassOneThR implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("ClassOne " + i);
+        }
+    }
+}
+
+class ClassTwoThR implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("ClassTwo " + i);
+        }
+    }
+}
+
+class ClassThreeThR implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("ClassThree " + i);
+        }
+    }
+}
+
+public class NewClass2 {
+    public static void main(String[] args) {
+        ClassOneThR obj1 = new ClassOneThR();
+        ClassTwoThR obj2 = new ClassTwoThR();
+        ClassThreeThR obj3 = new ClassThreeThR();
+
+        Thread th1 = new Thread(obj1);
+        th1.start();
+
+        Thread th2 = new Thread(obj2);
+        th2.start();
+
+        Thread th3 = new Thread(obj3);
+        th3.start();
+    }
+}
+```
+<img width="637" height="522" alt="Screenshot 2026-04-16 100728" src="https://github.com/user-attachments/assets/06d4906a-04cb-425b-8777-344a6a406d7e" />
+
+

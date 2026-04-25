@@ -10,7 +10,7 @@
 [Program-5 WAP to add two times where each time is in hours,minutes](#assi-5)
 
 [Program-6 Write a class that is having 4 methods for 1-dimensional array 1.INPUT 2.OUTPUT ORIGINAL 3.OUTPUT REVERSE 4.REVERSE](#assi-6)
-[Program-7 
+[Program-7 Write a program using three classes to print 1-100 ,1-100,1-100 with and without thread and analyse the output and repeat the same program using runnable interface](#assi-7)
 
 
 ------------------

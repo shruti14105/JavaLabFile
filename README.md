@@ -17,6 +17,15 @@
 
 [Program 9- Repeat the same program 7  using runnable interface](#assi-9)
 
+[Program 10- Addition of two numbers using swing](#assi-10)
+
+[Program 11- ](#assi-11)
+
+[Program 12- ](#assi-12)
+
+[Program 13- ](#assi-13)
+
+[Program 14- ](#assi-14)
 
 
 ------------------
@@ -566,6 +575,113 @@ public class NewClass2 {
 }
 ```
 <img width="591" height="597" alt="runnable screenshott" src="https://github.com/user-attachments/assets/428c2233-b191-44bd-9f82-850f5d1ad704" />
+
+## assi-10
+```
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Test1 extends JFrame implements ActionListener {
+
+    JTextField t1, t2, t3;
+    JButton btn;
+
+    Test1() {
+        t1 = new JTextField();
+        t2 = new JTextField();
+        t3 = new JTextField();
+        btn = new JButton("Add");
+
+        t1.setBounds(50, 50, 120, 30);
+        t2.setBounds(50, 100, 120, 30);
+        t3.setBounds(50, 150, 120, 30);
+        btn.setBounds(50, 200, 120, 30);
+
+        add(t1); add(t2); add(t3); add(btn);
+
+        btn.addActionListener(this);
+
+        setSize(300, 300);
+        setLayout(null);
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        int a = Integer.parseInt(t1.getText());
+        int b = Integer.parseInt(t2.getText());
+        t3.setText(String.valueOf(a + b));
+    }
+
+    public static void main(String[] args) {
+        new Test1();
+    }
+}
+```
+
+<img width="449" height="461" alt="image" src="https://github.com/user-attachments/assets/8085c1da-8f9a-4f9b-8726-6393a42a69d2" />
+
+## assi-11
+```
+
+```
+
+
+## assi-12
+```
+
+```
+
+## assi-13
+```
+
+```
+
+## assi-14
+```
+
+```
+
+## assi-15
+```
+
+```
+
+## assi-16
+```
+
+```
+
+## assi-17
+```
+
+```
+
+## assi-18
+```
+
+```
+## assi-19
+```
+
+```
+
+## assi-20
+```
+
+```
+
+## assi-21
+```
+
+```
+
+## assi-22
+```
+
+```
+
+
 
 
 

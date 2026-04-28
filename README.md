@@ -599,7 +599,42 @@ public class NewClass2 {
 
 ## assi-10
 ```
+public class Test1 {
 
+    static class MyThread extends Thread {
+        String name;
+
+        MyThread(String name) {
+            this.name = name;
+        }
+
+        public void run() {
+            for (int i = 1; i <= 3; i++) {
+                System.out.println(name + " - " + i);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            MyThread t1 = new MyThread("Thread 1");
+            MyThread t2 = new MyThread("Thread 2");
+            MyThread t3 = new MyThread("Thread 3");
+
+            t1.start();
+            t1.join();
+
+            t2.start();
+            t2.join();
+
+            t3.start();
+            t3.join();
+
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
+    }
+}
 ```
 
 ## assi-11
@@ -872,13 +907,56 @@ public class Test1 extends JFrame implements MouseMotionListener {
 
 ## assi-17
 ```
+package mypack;
+public class Class1 {
+    public void show() {
+        System.out.println("Class1");
+    }
+}
 
+import mypack.*;
+
+public class Test1 {
+    public static void main(String[] args) {
+        Class1 c = new Class1();
+        c.show();
+    }
+}
 ```
+<img width="676" height="482" alt="image" src="https://github.com/user-attachments/assets/d5c9188e-9aa2-4197-974f-303a67d45085" />
 
 ## assi-18
 ```
+package mypack;
+public class A {
+    public void show() {
+        System.out.println("Class A");
+    }
+}
+package mypack.subpack;
+public class B {
+    public void show() {
+        System.out.println("Class B");
+    }
+}
 
+import mypack.A;
+import mypack.subpack.B;
+
+public class Test1 {
+    public static void main(String[] args) {
+        A a = new A();
+        B b = new B();
+
+        a.show();
+        b.show();
+    }
+}
 ```
+
+<img width="676" height="482" alt="image" src="https://github.com/user-attachments/assets/d5c9188e-9aa2-4197-974f-303a67d45085" />
+
+
 ## assi-19
 ```
 public class Test1 {
@@ -957,8 +1035,33 @@ public class Test1 {
 
 ## assi-22
 ```
+abstract class Animal {
+    abstract void sound();
+}
 
+interface Test {
+    void show();
+}
+
+class Dog extends Animal implements Test {
+    void sound() {
+        System.out.println("Bark");
+    }
+
+    public void show() {
+        System.out.println("Interface method");
+    }
+}
+
+public class Test1 {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+        d.show();
+    }
+}
 ```
+<img width="892" height="468" alt="image" src="https://github.com/user-attachments/assets/981af041-c09e-48ed-8130-34d5fc29b6ef" />
 
 
 

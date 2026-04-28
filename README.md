@@ -565,6 +565,7 @@ public class NewClass2 {
     }
 }
 ```
-img width="637" height="522" alt="Screenshot 2026-04-16 100728" src="https://github.com/user-attachments/assets/06d4906a-04cb-425b-8777-344a6a406d7e" /><
+<img width="591" height="597" alt="runnable screenshott" src="https://github.com/user-attachments/assets/428c2233-b191-44bd-9f82-850f5d1ad704" />
+
 
 

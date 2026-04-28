@@ -17,7 +17,7 @@
 
 [Program 9- Repeat the same program 7  using runnable interface](#assi-9)
 
-[Program 10-](#assi-10)
+[Program 10-Using the concept of multithreading the output of all three threads must be synchronised (use join method).](#assi-10)
 
 [Program 11- Addition of two numbers using swing](#assi-11)
 
@@ -33,17 +33,17 @@
 
 [Program 17-Create a package of any 5 classes of your choice and import it.](#assi-17)
 
-[Program 18-](#assi-18)
+[Program 18-Create one package and sub package import and test it .](#assi-18)
 
-[Program 19-](#assi-19)
+[Program 19-Create one small array of size 5 apply array out of bounds exception using try catch give a proper message in catch and demonstrate the exception exactly in the same fashion demonstrate arithmetic exception](#assi-19)
 
-[Program 20-](#assi-20)
+[Program 20-To test the range of age of one student.write a program using user defined exception.](#assi-20)
 
-[Program 21-](#assi-21)
+[Program 21-File Handling Programs](#assi-21)
 
-[Program 22-](#assi-22)
+[Program 22-. Inheritance Programs, using interface and abstract classes.](#assi-22)
 
-[Program 23-](#assi-23)
+
 
 
 
@@ -686,8 +686,87 @@ public class Test1 extends JFrame implements ActionListener {
 
 ## assi-12
 ```
+import javax.swing.*;
+import java.awt.event.*;
+import java.sql.*;
 
+public class Test1 extends JFrame implements ActionListener {
+
+    JTextField name, email, phone, city;
+    JPasswordField pass;
+    JButton submit;
+
+    Test1() {
+        setTitle("Registration Form");
+        setLayout(null);
+
+        name = new JTextField();
+        email = new JTextField();
+        phone = new JTextField();
+        city = new JTextField();
+        pass = new JPasswordField();
+
+        submit = new JButton("Submit");
+
+        JLabel l1 = new JLabel("Name");
+        JLabel l2 = new JLabel("Email");
+        JLabel l3 = new JLabel("Phone");
+        JLabel l4 = new JLabel("City");
+        JLabel l5 = new JLabel("Password");
+
+        l1.setBounds(50,50,100,30); name.setBounds(150,50,150,30);
+        l2.setBounds(50,100,100,30); email.setBounds(150,100,150,30);
+        l3.setBounds(50,150,100,30); phone.setBounds(150,150,150,30);
+        l4.setBounds(50,200,100,30); city.setBounds(150,200,150,30);
+        l5.setBounds(50,250,100,30); pass.setBounds(150,250,150,30);
+
+        submit.setBounds(150,300,100,30);
+
+        add(l1); add(name);
+        add(l2); add(email);
+        add(l3); add(phone);
+        add(l4); add(city);
+        add(l5); add(pass);
+        add(submit);
+
+        submit.addActionListener(this);
+
+        setSize(400,400);
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        try {
+            Connection con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/studentdb","root","root");
+
+            PreparedStatement ps = con.prepareStatement(
+                "INSERT INTO register VALUES(?,?,?,?,?)");
+
+            ps.setString(1, name.getText());
+            ps.setString(2, email.getText());
+            ps.setString(3, phone.getText());
+            ps.setString(4, city.getText());
+            ps.setString(5, new String(pass.getPassword()));
+
+            ps.executeUpdate();
+
+            JOptionPane.showMessageDialog(this, "Data Saved!");
+
+            con.close();
+
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, ex);
+        }
+    }
+
+    public static void main(String[] args) {
+        new Test1();
+    }
+}
 ```
+<img width="449" height="461" alt="image" src="https://github.com/user-attachment/assets/8085c1da-8f9a-4f9b-8726-6393a4269d2" />
 
 ## assi-13
 ```

@@ -17,15 +17,36 @@
 
 [Program 9- Repeat the same program 7  using runnable interface](#assi-9)
 
-[Program 10- Addition of two numbers using swing](#assi-10)
+[Program 10-](#assi-10)
 
-[Program 11- ](#assi-11)
+[Program 11- Addition of two numbers using swing](#assi-11)
 
-[Program 12- ](#assi-12)
+[Program 12-Make a registration form with 10 elements and send the data into database (use jdbc connectivity) ](#assi-12)
 
-[Program 13- ](#assi-13)
+[Program 13-Make one calculator in swing. ](#assi-13)
 
-[Program 14- ](#assi-14)
+[Program 14-Matrix Addition using swing class. ](#assi-14)
+
+[Program 15- Create one jframe apply 10 buttons on that after clicking on each button a new structure is created.(Circle, oval rectangle, etc ](#assi-15)
+
+[Program 16-Just using mouse Event create a frame like paint brush with selection of colour and width . ](#assi-16)
+
+[Program 17-Create a package of any 5 classes of your choice and import it.](#assi-17)
+
+[Program 18-](#assi-18)
+
+[Program 19-](#assi-19)
+
+[Program 20-](#assi-20)
+
+[Program 21-](#assi-21)
+
+[Program 22-](#assi-22)
+
+[Program 23-](#assi-23)
+
+
+
 
 
 ------------------
@@ -578,6 +599,11 @@ public class NewClass2 {
 
 ## assi-10
 ```
+
+```
+
+## assi-11
+```
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -621,10 +647,6 @@ public class Test1 extends JFrame implements ActionListener {
 
 <img width="449" height="461" alt="image" src="https://github.com/user-attachments/assets/8085c1da-8f9a-4f9b-8726-6393a42a69d2" />
 
-## assi-11
-```
-
-```
 
 
 ## assi-12
@@ -634,23 +656,219 @@ public class Test1 extends JFrame implements ActionListener {
 
 ## assi-13
 ```
+import javax.swing.*;
+import java.awt.event.*;
 
+public class Test1 extends JFrame implements ActionListener {
+
+    JTextField t1, t2, result;
+    JButton add, sub, mul, div;
+
+    Test1() {
+        t1 = new JTextField();
+        t2 = new JTextField();
+        result = new JTextField();
+
+        add = new JButton("+");
+        sub = new JButton("-");
+        mul = new JButton("*");
+        div = new JButton("/");
+
+        t1.setBounds(50,50,100,30);
+        t2.setBounds(50,100,100,30);
+        result.setBounds(50,150,100,30);
+
+        add.setBounds(200,50,50,30);
+        sub.setBounds(200,100,50,30);
+        mul.setBounds(200,150,50,30);
+        div.setBounds(200,200,50,30);
+
+        add(t1); add(t2); add(result);
+        add(add); add(sub); add(mul); add(div);
+
+        add.addActionListener(this);
+        sub.addActionListener(this);
+        mul.addActionListener(this);
+        div.addActionListener(this);
+
+        setSize(350,300);
+        setLayout(null);
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        int a = Integer.parseInt(t1.getText());
+        int b = Integer.parseInt(t2.getText());
+
+        if (e.getSource() == add)
+            result.setText(String.valueOf(a+b));
+        else if (e.getSource() == sub)
+            result.setText(String.valueOf(a-b));
+        else if (e.getSource() == mul)
+            result.setText(String.valueOf(a*b));
+        else if (e.getSource() == div)
+            result.setText(String.valueOf(a/b));
+    }
+
+    public static void main(String[] args) {
+        new Test1();
+    }
+}
 ```
+
+<img width="530" height="450" alt="image" src="https://github.com/user-attachments/assets/80029d58-7ea6-4d88-bd38-72c3b75cd058" />
+
 
 ## assi-14
 ```
+import javax.swing.*;
+import java.awt.event.*;
 
+public class Test1 extends JFrame implements ActionListener {
+
+    JTextField a1,a2,a3,a4,b1,b2,b3,b4,r1,r2,r3,r4;
+    JButton btn;
+
+    Test1() {
+        setLayout(null);
+
+        a1=new JTextField(); a2=new JTextField();
+        a3=new JTextField(); a4=new JTextField();
+
+        b1=new JTextField(); b2=new JTextField();
+        b3=new JTextField(); b4=new JTextField();
+
+        r1=new JTextField(); r2=new JTextField();
+        r3=new JTextField(); r4=new JTextField();
+
+        btn=new JButton("Add");
+
+        a1.setBounds(50,50,40,30); a2.setBounds(100,50,40,30);
+        a3.setBounds(50,100,40,30); a4.setBounds(100,100,40,30);
+
+        b1.setBounds(200,50,40,30); b2.setBounds(250,50,40,30);
+        b3.setBounds(200,100,40,30); b4.setBounds(250,100,40,30);
+
+        r1.setBounds(350,50,40,30); r2.setBounds(400,50,40,30);
+        r3.setBounds(350,100,40,30); r4.setBounds(400,100,40,30);
+
+        btn.setBounds(200,150,100,30);
+
+        add(a1);add(a2);add(a3);add(a4);
+        add(b1);add(b2);add(b3);add(b4);
+        add(r1);add(r2);add(r3);add(r4);
+        add(btn);
+
+        btn.addActionListener(this);
+
+        setSize(500,300);
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        r1.setText(""+(Integer.parseInt(a1.getText())+Integer.parseInt(b1.getText())));
+        r2.setText(""+(Integer.parseInt(a2.getText())+Integer.parseInt(b2.getText())));
+        r3.setText(""+(Integer.parseInt(a3.getText())+Integer.parseInt(b3.getText())));
+        r4.setText(""+(Integer.parseInt(a4.getText())+Integer.parseInt(b4.getText())));
+    }
+
+    public static void main(String[] args) {
+        new Test1();
+    }
+}
 ```
+<img width="751" height="443" alt="image" src="https://github.com/user-attachments/assets/611c6666-09d7-41fe-862e-f9042d118dbb" />
 
 ## assi-15
 ```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
+public class Test1 extends JFrame implements ActionListener {
+
+    String shape="";
+
+    JButton circle, rect, oval;
+
+    Test1() {
+        circle=new JButton("Circle");
+        rect=new JButton("Rectangle");
+        oval=new JButton("Oval");
+
+        circle.setBounds(50,50,100,30);
+        rect.setBounds(160,50,100,30);
+        oval.setBounds(270,50,100,30);
+
+        add(circle); add(rect); add(oval);
+
+        circle.addActionListener(this);
+        rect.addActionListener(this);
+        oval.addActionListener(this);
+
+        setSize(500,400);
+        setLayout(null);
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        shape = e.getActionCommand();
+        repaint();
+    }
+
+    public void paint(Graphics g) {
+        super.paint(g);
+
+        if(shape.equals("Circle"))
+            g.drawOval(200,150,100,100);
+        else if(shape.equals("Rectangle"))
+            g.drawRect(200,150,120,80);
+        else if(shape.equals("Oval"))
+            g.drawOval(200,150,150,80);
+    }
+
+    public static void main(String[] args) {
+        new Test1();
+    }
+}
 ```
+<img width="769" height="614" alt="image" src="https://github.com/user-attachments/assets/a2dfbe97-345a-4803-881d-ccd71b74d3f6" />
+
 
 ## assi-16
 ```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
+public class Test1 extends JFrame implements MouseMotionListener {
+
+    int x,y;
+
+    Test1() {
+        addMouseMotionListener(this);
+        setSize(500,400);
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public void mouseDragged(MouseEvent e) {
+        Graphics g = getGraphics();
+        g.fillOval(e.getX(), e.getY(), 5, 5);
+    }
+
+    public void mouseMoved(MouseEvent e) {}
+
+    public static void main(String[] args) {
+        new Test1();
+    }
+}
 ```
+<img width="755" height="592" alt="image" src="https://github.com/user-attachments/assets/825eedbb-b657-48fc-88fd-2e3c6a48bb7e" />
+
 
 ## assi-17
 ```
@@ -663,23 +881,85 @@ public class Test1 extends JFrame implements ActionListener {
 ```
 ## assi-19
 ```
+public class Test1 {
+    public static void main(String[] args) {
 
+        try {
+            int arr[] = {1,2,3,4,5};
+            System.out.println(arr[10]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array index out of bounds!");
+        }
+
+        try {
+            int a = 10/0;
+        } catch (ArithmeticException e) {
+            System.out.println("Division by zero not allowed!");
+        }
+    }
+}
 ```
+
+<img width="1051" height="489" alt="image" src="https://github.com/user-attachments/assets/747bfded-a279-4027-b082-b08fc32e7fdf" />
 
 ## assi-20
 ```
+class AgeException extends Exception {
+    AgeException(String msg) {
+        super(msg);
+    }
+}
 
+public class Test1 {
+    static void checkAge(int age) throws AgeException {
+        if(age < 18)
+            throw new AgeException("Invalid Age!");
+        else
+            System.out.println("Valid Age");
+    }
+
+    public static void main(String[] args) {
+        try {
+            checkAge(15);
+        } catch(Exception e) {
+            System.out.println(e);
+        }
+    }
+}
 ```
+
+<img width="1174" height="639" alt="image" src="https://github.com/user-attachments/assets/0e88e24e-41df-4294-95eb-ffdd87bd1fc1" />
+
+
 
 ## assi-21
 ```
+import java.io.*;
 
+public class Test1 {
+    public static void main(String[] args) {
+        try {
+            FileWriter fw = new FileWriter("test.txt");
+            fw.write("Hello File");
+            fw.close();
+
+            BufferedReader br = new BufferedReader(new FileReader("test.txt"));
+            System.out.println(br.readLine());
+            br.close();
+
+        } catch(Exception e) {
+            System.out.println(e);
+        }
+    }
+}
 ```
+<img width="878" height="540" alt="image" src="https://github.com/user-attachments/assets/7cca62d3-46d8-4f6d-813b-89cc28e7291e" />
 
 ## assi-22
 ```
 
 ```
+
 
 
 

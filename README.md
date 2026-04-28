@@ -11,7 +11,12 @@
 
 [Program-6 Write a class that is having 4 methods for 1-dimensional array 1.INPUT 2.OUTPUT ORIGINAL 3.OUTPUT REVERSE 4.REVERSE](#assi-6)
 
-[Program-7 Write a program using three classes to print 1-100 ,1-100,1-100 with and without thread and analyse the output and repeat the same program using runnable interface](#assi-7)
+[Program-7 Write a program using three classes to print 1-100 ,1-100,1-100 without  thread and analyse the output ](#assi-7)
+
+[Program-8 Write a program using three classes to print 1-100 ,1-100,1-100 with thread and analyse the output ](#assi-8)
+
+[Program 9- Repeat the same program 7  using runnable interface](#assi-9)
+
 
 
 ------------------
@@ -434,6 +439,8 @@ class OneDArray {
 }
 ```
 <img width="409" height="275" alt="image" src="https://github.com/user-attachments/assets/2c4a3cb5-5a6d-45c5-894a-84f70450e690" />
+
+
 ## assi-7
 ```
 class ClassOne {
@@ -474,6 +481,7 @@ public class NewClass {
 ```
 <img width="637" height="522" alt="Screenshot 2026-04-16 100728" src="https://github.com/user-attachments/assets/30577073-1831-41ff-bbe9-5618b98debe3" />
 
+
 ## assi-8
 ```
 class ClassOneTh extends Thread {
@@ -513,6 +521,7 @@ public class NewClass1 {
 }
 ```
 <img width="647" height="677" alt="Screenshot 2026-04-16 094708" src="https://github.com/user-attachments/assets/b0720450-0efe-4471-ab5a-0b5b434a6308" />
+
 ## assi-9
 ```
 class ClassOneThR implements Runnable {
